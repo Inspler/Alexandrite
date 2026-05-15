@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Al Hajis Perfumes — Luxury Fragrance · Dubai</title>
+<link rel="icon" type="image/webp" href="https://cdn.shopify.com/s/files/1/0668/6831/4368/files/Slider-Logos-03.webp?v=1777542287" />
+<link rel="shortcut icon" type="image/webp" href="https://cdn.shopify.com/s/files/1/0668/6831/4368/files/Slider-Logos-03.webp?v=1777542287" />
+<link rel="apple-touch-icon" href="https://cdn.shopify.com/s/files/1/0668/6831/4368/files/Slider-Logos-03.webp?v=1777542287" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Marcellus&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f1e7;
+    --bg-soft:#ede4d1;
+    --paper:#faf6ec;
+    --ink:#2a1f14;
+    --ink-soft:#5a4a37;
+    --champagne:#a8843f;
+    --champagne-dark:#8a6a2e;
+    --rose:#b88a7a;
+    --line:rgba(168,132,63,0.22);
+    --line-strong:rgba(168,132,63,0.5);
+    --serif:'Cormorant Garamond', serif;
+    --display:'Playfair Display', serif;
+    --sans:'Inter', sans-serif;
+    --num:'Marcellus', 'Cormorant Garamond', serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--serif);
+    font-weight:400;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  body::before{
+    content:'';
+    position:fixed;inset:0;
+    pointer-events:none;
+    z-index:1000;
+    opacity:.05;
+    mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+
+  /* ---------- NAVIGATION ---------- */
+  nav{
+    position:fixed;top:0;left:0;right:0;
+    z-index:100;
+    padding:18px 48px;
+    display:flex;align-items:center;justify-content:space-between;
+    background:linear-gradient(180deg, rgba(246,241,231,.92), rgba(246,241,231,0));
+    backdrop-filter:blur(8px);
+    transition:padding .4s ease, background .4s ease;
+  }
+  nav.scrolled{
+    padding:10px 48px;
+    background:rgba(246,241,231,.96);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-logo{
+    display:flex;align-items:center;
+  }
+  .nav-logo img{
+    height:54px;width:auto;display:block;
+    transition:height .4s ease;
+  }
+  nav.scrolled .nav-logo img{height:42px}
+  .nav-links{
+    display:flex;gap:42px;
+    font-family:var(--sans);
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.28em;
+    font-weight:400;
+  }
+  .nav-links a{
+    color:var(--ink);text-decoration:none;
+    position:relative;padding:6px 0;
+    transition:color .3s;
+  }
+  .nav-links a::after{
+    content:'';position:absolute;bottom:0;left:0;
+    width:0;height:1px;background:var(--champagne);
+    transition:width .4s ease;
+  }
+  .nav-links a:hover{color:var(--champagne)}
+  .nav-links a:hover::after{width:100%}
+  .nav-right{
+    font-family:var(--sans);
+    font-size:11px;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--ink-soft);
+    display:flex;align-items:center;gap:14px;
+  }
+  .nav-right::before{
+    content:'';width:6px;height:6px;border-radius:50%;
+    background:var(--champagne);
+  }
+  /* hamburger button */
+  .nav-toggle{
+    display:none;
+    background:transparent;border:none;
+    width:32px;height:32px;
+    cursor:pointer;padding:0;
+    flex-direction:column;justify-content:center;
+    gap:5px;align-items:flex-end;
+  }
+  .nav-toggle span{
+    display:block;height:1.5px;
+    background:var(--ink);
+    transition:all .35s ease;
+  }
+  .nav-toggle span:nth-child(1){width:24px}
+  .nav-toggle span:nth-child(2){width:18px}
+  .nav-toggle span:nth-child(3){width:24px}
+  /* mobile menu overlay */
+  .mobile-menu{
+    position:fixed;top:0;left:0;right:0;bottom:0;
+    background:var(--bg);
+    z-index:200;
+    transform:translateY(-100%);
+    transition:transform .55s cubic-bezier(.7,0,.3,1);
+    display:flex;align-items:center;justify-content:center;
+    padding:80px 30px;
+  }
+  .mobile-menu.open{transform:translateY(0)}
+  .mobile-menu-close{
+    position:absolute;top:22px;right:24px;
+    background:transparent;border:none;
+    font-family:var(--display);
+    font-size:42px;font-weight:300;
+    color:var(--ink);cursor:pointer;
+    line-height:1;
+  }
+  .mobile-menu-inner{
+    text-align:center;
+    width:100%;
+  }
+  .mobile-menu-inner a{
+    display:block;
+    font-family:var(--display);
+    font-size:34px;font-weight:400;
+    color:var(--ink);text-decoration:none;
+    padding:14px 0;
+    position:relative;
+    transition:color .3s;
+  }
+  .mobile-menu-inner a:hover{color:var(--champagne)}
+  .mobile-menu-meta{
+    margin-top:40px;
+    padding-top:30px;
+    border-top:1px solid var(--line);
+    font-family:var(--sans);
+    font-size:12px;
+    letter-spacing:.2em;text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  .mobile-menu-meta div{margin-bottom:14px}
+  .mobile-menu-meta a{
+    font-family:var(--sans);
+    font-size:13px !important;
+    letter-spacing:.18em;
+    color:var(--champagne-dark);
+    padding:6px 0 !important;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    height:100vh;min-height:760px;
+    position:relative;
+    overflow:hidden;
+    display:flex;align-items:center;
+    background:
+      radial-gradient(circle at 18% 28%, rgba(168,132,63,.12), transparent 50%),
+      radial-gradient(circle at 82% 72%, rgba(184,138,122,.10), transparent 55%),
+      linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+  }
+  /* huge faded brand word behind hero */
+  .hero::before{
+    content:'IMAGE';
+    position:absolute;
+    top:50%;left:50%;
+    transform:translate(-50%,-50%);
+    font-family:var(--display);
+    font-weight:400;
+    font-size:clamp(220px, 32vw, 480px);
+    color:rgba(168,132,63,.05);
+    letter-spacing:-.04em;
+    white-space:nowrap;
+    pointer-events:none;
+    z-index:0;
+    line-height:.8;
+  }
+  /* thin gold vertical line ornament */
+  .hero-ornament{
+    position:absolute;
+    top:120px;right:60px;
+    width:1px;height:140px;
+    background:linear-gradient(180deg, transparent, var(--champagne));
+    z-index:1;
+    pointer-events:none;
+  }
+  .hero-ornament-bl{
+    position:absolute;
+    left:60px;top:140px;
+    width:80px;height:1px;
+    background:linear-gradient(90deg, var(--champagne), transparent);
+    z-index:1;
+    pointer-events:none;
+  }
+  .hero-inner{
+    position:relative;z-index:2;
+    padding:0 80px;
+    max-width:1500px;margin:0 auto;width:100%;
+    display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:60px;
+  }
+  .hero-eyebrow{
+    font-family:var(--sans);
+    font-size:11px;letter-spacing:.4em;text-transform:uppercase;
+    color:var(--champagne-dark);
+    display:flex;align-items:center;gap:16px;
+    margin-bottom:36px;
+    opacity:0;animation:rise 1s .2s ease forwards;
+  }
+  .hero-eyebrow::before{
+    content:'';width:42px;height:1px;background:var(--champagne);
+  }
+  .hero h1{
+    font-family:var(--display);
+    font-weight:400;
+    font-size:clamp(54px, 7vw, 110px);
+    line-height:.95;
+    letter-spacing:-.02em;
+    color:var(--ink);
+    margin-bottom:36px;
+    opacity:0;animation:rise 1.2s .4s ease forwards;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--champagne);
+    font-weight:400;
+    display:block;
+  }
+  .hero-sub{
+    font-size:19px;
+    line-height:1.7;
+    color:var(--ink-soft);
+    max-width:460px;
+    font-weight:400;
+    margin-bottom:48px;
+    opacity:0;animation:rise 1s .7s ease forwards;
+  }
+  .hero-cta{
+    display:flex;gap:24px;align-items:center;flex-wrap:wrap;
+    opacity:0;animation:rise 1s .9s ease forwards;
+  }
+  .btn{
+    font-family:var(--sans);
+    font-size:11px;letter-spacing:.32em;text-transform:uppercase;
+    padding:18px 38px;
+    border:1px solid var(--champagne);
+    background:transparent;
+    color:var(--ink);
+    cursor:pointer;
+    transition:all .4s ease;
+    position:relative;overflow:hidden;
+    text-decoration:none;display:inline-block;
+    z-index:1;
+  }
+  .btn::before{
+    content:'';position:absolute;inset:0;
+    background:var(--champagne);
+    transform:translateY(101%);
+    transition:transform .4s cubic-bezier(.7,0,.3,1);
+    z-index:-1;
+  }
+  .btn:hover{color:var(--paper);border-color:var(--champagne)}
+  .btn:hover::before{transform:translateY(0)}
+  .btn.ghost{border-color:transparent;padding-left:0;color:var(--champagne-dark)}
+  .btn.ghost::before{display:none}
+  .btn.ghost::after{
+    content:'→';margin-left:14px;
+    transition:transform .3s;display:inline-block;
+  }
+  .btn.ghost:hover{color:var(--ink)}
+  .btn.ghost:hover::after{transform:translateX(8px)}
+
+  .hero-visual{
+    position:relative;
+    display:flex;align-items:center;justify-content:flex-end;
+    height:100%;
+    opacity:0;animation:rise 1.4s .6s ease forwards;
+  }
+  .hero-bottle{
+    display:block;
+    width:100%;max-width:540px;height:auto;
+    object-fit:contain;
+    filter:drop-shadow(0 30px 60px rgba(90,74,55,.28));
+  }
+  .hero-meta{
+    position:absolute;left:80px;bottom:60px;
+    display:flex;gap:60px;
+    font-family:var(--sans);
+    font-size:10px;letter-spacing:.32em;text-transform:uppercase;
+    color:var(--ink-soft);
+    opacity:0;animation:rise 1s 1.1s ease forwards;
+    z-index:3;
+  }
+  .hero-meta div span{
+    display:block;
+    font-family:var(--num);font-style:normal;
+    font-size:30px;letter-spacing:.02em;text-transform:none;
+    color:var(--champagne);margin-bottom:8px;
+    font-feature-settings:'tnum' on, 'lnum' on;
+  }
+  .hero-scroll{
+    position:absolute;right:60px;bottom:60px;
+    writing-mode:vertical-rl;
+    font-family:var(--sans);font-size:10px;
+    letter-spacing:.4em;text-transform:uppercase;
+    color:var(--ink-soft);
+    display:flex;align-items:center;gap:18px;
+    z-index:3;
+    opacity:0;animation:rise 1s 1.3s ease forwards;
+  }
+  .hero-scroll::after{
+    content:'';width:1px;height:60px;background:var(--champagne);
+    animation:scrollLine 2s ease-in-out infinite;
+  }
+  @keyframes scrollLine{
+    0%,100%{transform:scaleY(.4);transform-origin:top}
+    50%{transform:scaleY(1)}
+  }
+  @keyframes rise{
+    from{opacity:0;transform:translateY(40px)}
+    to{opacity:1;transform:translateY(0)}
+  }
+
+  /* ---------- MARQUEE ---------- */
+  .marquee{
+    padding:28px 0;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    overflow:hidden;
+    background:var(--bg-soft);
+  }
+  .marquee-track{
+    display:flex;gap:80px;
+    animation:scroll 40s linear infinite;
+    white-space:nowrap;
+  }
+  .marquee-track span{
+    font-family:var(--display);font-style:italic;
+    font-size:22px;color:var(--champagne-dark);
+    display:inline-flex;align-items:center;gap:80px;
+  }
+  .marquee-track span::after{
+    content:'✦';color:var(--ink);font-style:normal;font-size:14px;opacity:.5;
+  }
+  @keyframes scroll{
+    to{transform:translateX(-50%)}
+  }
+
+  /* ---------- SECTION ---------- */
+  section{padding:140px 80px;max-width:1500px;margin:0 auto}
+  .section-head{
+    display:grid;grid-template-columns:1fr 2fr;gap:60px;
+    align-items:end;margin-bottom:80px;
+  }
+  .section-eyebrow{
+    font-family:var(--sans);
+    font-size:11px;letter-spacing:.4em;text-transform:uppercase;
+    color:var(--champagne-dark);
+    display:flex;align-items:center;gap:16px;
+  }
+  .section-eyebrow::before{
+    content:'';width:42px;height:1px;background:var(--champagne);
+  }
+  .section-title{
+    font-family:var(--display);
+    font-weight:400;
+    font-size:clamp(40px, 5vw, 72px);
+    line-height:1;
+    letter-spacing:-.02em;
+    color:var(--ink);
+  }
+  .section-title em{font-style:italic;color:var(--champagne)}
+
+  /* ---------- COLLECTION ---------- */
+  .collection{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:50px;
+  }
+  .product-card{
+    position:relative;
+  }
+  .product-img{
+    aspect-ratio:4/5;
+    background:var(--paper);
+    overflow:hidden;
+    position:relative;
+    border:1px solid var(--line);
+    margin-bottom:24px;
+  }
+  .product-img img{
+    width:100%;height:100%;object-fit:cover;
+    transition:transform 1.2s cubic-bezier(.2,.7,.3,1);
+  }
+  .product-card:hover .product-img img{transform:scale(1.06)}
+  .product-img::before{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(180deg, transparent 60%, rgba(42,31,20,.18) 100%);
+    z-index:1;pointer-events:none;
+  }
+  .product-badge{
+    position:absolute;top:20px;left:20px;
+    z-index:2;
+    font-family:var(--sans);
+    font-size:9px;letter-spacing:.32em;text-transform:uppercase;
+    color:var(--champagne-dark);
+    padding:6px 14px;
+    border:1px solid var(--champagne);
+    background:rgba(250,246,236,.85);
+    backdrop-filter:blur(4px);
+  }
+
+  .product-meta{
+    display:flex;justify-content:space-between;align-items:start;
+    gap:20px;
+  }
+  .product-name{
+    font-family:var(--display);
+    font-size:24px;font-weight:500;
+    margin-bottom:6px;
+    letter-spacing:-.01em;
+    color:var(--ink);
+  }
+  .product-notes{
+    font-style:italic;
+    font-size:14px;
+    color:var(--ink-soft);
+  }
+  .product-price{
+    font-family:var(--num);
+    font-size:22px;
+    font-weight:400;
+    color:var(--champagne-dark);
+    white-space:nowrap;
+    text-align:right;
+    letter-spacing:.04em;
+    font-feature-settings:'tnum' on, 'lnum' on;
+  }
+  .product-price small{
+    display:block;
+    font-family:var(--sans);
+    font-size:9px;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--ink-soft);opacity:.7;
+    margin-top:4px;
+  }
+
+  /* ---------- SIGNATURE FEATURE ---------- */
+  .signature{
+    background:var(--bg-soft);
+    padding:140px 80px;
+    margin:0;max-width:none;
+    position:relative;overflow:hidden;
+  }
+  .signature::before{
+    content:'IMAGE';
+    position:absolute;
+    bottom:-40px;left:-20px;right:0;
+    font-family:var(--display);
+    font-size:clamp(180px, 28vw, 420px);
+    font-weight:400;
+    color:rgba(168,132,63,.06);
+    letter-spacing:-.04em;
+    white-space:nowrap;
+    pointer-events:none;
+    line-height:.8;
+  }
+  .sig-inner{
+    max-width:1500px;margin:0 auto;
+    display:grid;grid-template-columns:1.1fr 1fr;gap:100px;
+    align-items:center;position:relative;z-index:2;
+  }
+  .sig-image{
+    aspect-ratio:4/5;
+    background:url('https://cdn.shopify.com/s/files/1/0668/6831/4368/files/Image_ai_pic.webp?v=1778750782') center/cover no-repeat;
+    border:1px solid var(--line);
+    position:relative;
+  }
+  .sig-image::after{
+    content:'';
+    position:absolute;inset:18px;
+    border:1px solid rgba(42,31,20,.1);
+    pointer-events:none;
+  }
+  .sig-content h2{
+    font-family:var(--display);
+    font-size:clamp(46px, 5.5vw, 78px);
+    font-weight:400;line-height:1;
+    margin-bottom:36px;letter-spacing:-.02em;
+    color:var(--ink);
+  }
+  .sig-content h2 em{font-style:italic;color:var(--champagne)}
+  .sig-content p{
+    font-size:19px;line-height:1.8;color:var(--ink-soft);
+    font-weight:400;margin-bottom:24px;max-width:520px;
+  }
+  .notes-pyramid{
+    margin:50px 0;
+    padding:32px 0;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .note-row{
+    display:grid;grid-template-columns:120px 1fr;
+    padding:14px 0;
+    align-items:baseline;
+    gap:20px;
+  }
+  .note-row + .note-row{border-top:1px solid var(--line)}
+  .note-label{
+    font-family:var(--sans);
+    font-size:10px;letter-spacing:.32em;text-transform:uppercase;
+    color:var(--champagne-dark);
+  }
+  .note-content{
+    font-family:var(--display);
+    font-style:italic;
+    font-size:20px;
+    color:var(--ink);
+  }
+
+  /* ---------- DUAL SHOWCASE ---------- */
+  .duo{
+    display:grid;grid-template-columns:1fr 1fr;
+    gap:0;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    margin:0;max-width:none;padding:0;
+    background:var(--bg);
+  }
+  .duo-card{
+    padding:100px 80px;
+    position:relative;
+    transition:background .5s;
+  }
+  .duo-card:hover{background:var(--bg-soft)}
+  .duo-card + .duo-card{border-left:1px solid var(--line)}
+  .duo-img{
+    aspect-ratio:1;
+    background-size:contain;background-repeat:no-repeat;background-position:center;
+    margin-bottom:40px;
+    transition:transform .8s cubic-bezier(.2,.7,.3,1);
+  }
+  .duo-card:hover .duo-img{transform:translateY(-12px)}
+  .duo-card h3{
+    font-family:var(--display);
+    font-size:42px;font-weight:400;
+    margin-bottom:16px;letter-spacing:-.01em;
+    color:var(--ink);
+  }
+  .duo-card h3 em{font-style:italic;color:var(--champagne)}
+  .duo-card p{
+    font-size:17px;line-height:1.7;color:var(--ink-soft);
+    font-weight:400;margin-bottom:28px;font-style:italic;
+  }
+  .duo-price{
+    display:flex;justify-content:space-between;align-items:center;
+    padding-top:28px;border-top:1px solid var(--line);
+    flex-wrap:wrap;gap:16px;
+  }
+  .duo-price-num{
+    font-family:var(--num);
+    font-size:30px;color:var(--champagne-dark);
+    letter-spacing:.04em;
+    font-feature-settings:'tnum' on, 'lnum' on;
+  }
+  .duo-price-num small{
+    font-family:var(--sans);
+    font-size:11px;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--ink-soft);opacity:.7;margin-left:8px;
+  }
+
+  /* ---------- THE HOUSE ---------- */
+  .house{
+    background:var(--bg);
+    text-align:center;
+    padding:160px 80px;
+    max-width:none;margin:0;
+    position:relative;
+  }
+  .house-inner{max-width:880px;margin:0 auto}
+  .house-mark{
+    font-family:var(--display);
+    font-size:60px;color:var(--champagne);
+    margin-bottom:32px;
+    line-height:1;
+  }
+  .house h2{
+    font-family:var(--display);
+    font-size:clamp(40px, 5vw, 64px);
+    font-weight:400;line-height:1.15;
+    letter-spacing:-.01em;
+    margin-bottom:48px;
+    color:var(--ink);
+  }
+  .house h2 em{font-style:italic;color:var(--champagne)}
+  .house p{
+    font-size:20px;line-height:1.9;color:var(--ink-soft);
+    font-weight:400;margin-bottom:24px;
+  }
+  .house-sign{
+    margin-top:60px;
+    font-family:var(--display);
+    font-style:italic;
+    font-size:24px;
+    color:var(--champagne-dark);
+  }
+  .house-sign-line{
+    width:80px;height:1px;background:var(--champagne);
+    margin:24px auto 0;
+  }
+
+  /* ---------- PRESS ---------- */
+  .press{
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:50px 80px;
+    max-width:none;margin:0;
+    display:grid;grid-template-columns:auto repeat(4, 1fr);
+    gap:60px;align-items:center;
+    background:var(--bg-soft);
+  }
+  .press-label{
+    font-family:var(--sans);
+    font-size:10px;letter-spacing:.4em;text-transform:uppercase;
+    color:var(--champagne-dark);
+  }
+  .press-name{
+    font-family:var(--display);
+    font-style:italic;
+    font-size:26px;
+    color:var(--ink-soft);
+    text-align:center;
+    opacity:.75;
+    transition:opacity .3s,color .3s;
+  }
+  .press-name:hover{opacity:1;color:var(--ink)}
+
+  /* ---------- NEWSLETTER ---------- */
+  .newsletter{
+    background:linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+    padding:140px 80px;
+    max-width:none;margin:0;
+    text-align:center;
+    position:relative;overflow:hidden;
+  }
+  .newsletter h2{
+    font-family:var(--display);
+    font-size:clamp(40px, 5vw, 64px);
+    font-weight:400;
+    margin-bottom:24px;letter-spacing:-.01em;
+    color:var(--ink);
+  }
+  .newsletter h2 em{font-style:italic;color:var(--champagne)}
+  .newsletter p{
+    font-size:18px;color:var(--ink-soft);font-weight:400;
+    max-width:520px;margin:0 auto 48px;line-height:1.7;
+  }
+  .news-form{
+    display:flex;max-width:520px;margin:0 auto;
+    border-bottom:1px solid var(--champagne);
+  }
+  .news-form input{
+    flex:1;
+    background:transparent;border:none;outline:none;
+    color:var(--ink);
+    font-family:var(--serif);
+    font-size:18px;
+    padding:18px 0;
+  }
+  .news-form input::placeholder{color:var(--ink-soft);opacity:.6;font-style:italic}
+  .news-form button{
+    background:transparent;border:none;color:var(--champagne-dark);
+    font-family:var(--sans);font-size:11px;
+    letter-spacing:.32em;text-transform:uppercase;
+    cursor:pointer;padding:0 20px;
+    transition:transform .3s;
+  }
+  .news-form button:hover{transform:translateX(6px)}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--bg-soft);
+    padding:80px 80px 40px;
+    border-top:1px solid var(--line);
+  }
+  .foot-grid{
+    max-width:1500px;margin:0 auto;
+    display:grid;grid-template-columns:2fr 1fr 1fr;
+    gap:60px;
+    margin-bottom:60px;
+  }
+  .foot-brand img{
+    height:64px;width:auto;display:block;
+    margin-bottom:24px;
+  }
+  .foot-brand p{
+    font-size:15px;line-height:1.8;color:var(--ink-soft);
+    font-weight:400;font-style:italic;
+    max-width:340px;
+  }
+  .foot-col h4{
+    font-family:var(--sans);
+    font-size:11px;letter-spacing:.32em;text-transform:uppercase;
+    color:var(--champagne-dark);
+    margin-bottom:24px;font-weight:500;
+  }
+  .foot-col a, .foot-col p{
+    display:block;
+    color:var(--ink-soft);text-decoration:none;
+    font-size:15px;padding:6px 0;
+    transition:color .3s, padding .3s;
+  }
+  .foot-col a:hover{color:var(--champagne-dark);padding-left:8px}
+  .foot-bottom{
+    max-width:1500px;margin:0 auto;
+    padding-top:30px;
+    border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:center;
+    font-family:var(--sans);font-size:11px;
+    letter-spacing:.2em;text-transform:uppercase;
+    color:var(--ink-soft);opacity:.7;
+  }
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(60px);transition:opacity 1s ease, transform 1s ease}
+  .reveal.in{opacity:1;transform:translateY(0)}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:1024px){
+    nav{padding:14px 20px}
+    nav.scrolled{padding:10px 20px}
+    .nav-logo img{height:38px}
+    nav.scrolled .nav-logo img{height:34px}
+    .nav-links{display:none}
+    .nav-right{display:none}
+    .nav-toggle{display:flex}
+
+    .hero{
+      min-height:auto;height:auto;
+      padding:110px 0 70px;
+      display:block;
+      align-items:initial;
+    }
+    .hero-inner{
+      grid-template-columns:1fr;padding:0 24px;
+      gap:32px;
+      display:flex;flex-direction:column;
+    }
+    .hero h1{font-size:clamp(44px, 11vw, 64px) !important;margin-bottom:24px}
+    .hero-eyebrow{margin-bottom:20px;font-size:10px}
+    .hero-sub{font-size:16px;margin-bottom:32px}
+    .hero-cta{flex-direction:column;align-items:flex-start;gap:14px;width:100%}
+    .hero-cta .btn{width:100%;text-align:center;padding:16px 24px}
+    .hero-cta .btn.ghost{width:auto;padding:8px 0;text-align:left}
+    .hero-visual{
+      display:flex;justify-content:center;align-items:center;
+      height:auto;width:100%;
+      order:-1;
+      margin-bottom:8px;
+      opacity:1;animation:none;
+    }
+    .hero-bottle{
+      max-width:240px;
+      width:auto;height:auto;
+      max-height:280px;
+      filter:drop-shadow(0 14px 28px rgba(90,74,55,.16));
+    }
+    .hero-meta{
+      position:relative;left:auto;bottom:auto;
+      padding:40px 24px 0;margin-top:40px;
+      border-top:1px solid var(--line);
+      gap:24px;flex-wrap:wrap;
+      justify-content:flex-start;
+    }
+    .hero-meta div{flex:1 1 30%;min-width:90px}
+    .hero-meta div span{font-size:24px;margin-bottom:4px}
+    .hero-scroll{display:none}
+    .hero::before{font-size:clamp(140px, 36vw, 240px);opacity:.8}
+    .hero-ornament{top:90px;right:20px;height:80px}
+    .hero-ornament-bl{left:20px;top:100px;width:50px}
+
+    section{padding:80px 24px}
+    .section-head{grid-template-columns:1fr;gap:24px;margin-bottom:50px}
+    .section-title{font-size:clamp(34px, 8vw, 52px)}
+    .collection{grid-template-columns:1fr;gap:50px}
+    .signature{padding:80px 24px}
+    .sig-inner{grid-template-columns:1fr;gap:50px}
+    .sig-content h2{font-size:clamp(36px, 8vw, 56px)}
+    .duo{grid-template-columns:1fr}
+    .duo-card{padding:60px 24px}
+    .duo-card + .duo-card{border-left:none;border-top:1px solid var(--line)}
+    .house{padding:80px 24px}
+    .house h2{font-size:clamp(28px, 6.5vw, 44px)}
+    .press{grid-template-columns:1fr;gap:30px;padding:50px 24px;text-align:center}
+    .press-name{font-size:22px}
+    .newsletter{padding:80px 24px}
+    .newsletter h2{font-size:clamp(34px, 8vw, 52px)}
+    footer{padding:60px 24px 30px}
+    .foot-grid{grid-template-columns:1fr;gap:40px}
+    .foot-bottom{flex-direction:column;gap:14px;text-align:center;font-size:10px}
+    .marquee-track span{font-size:18px}
+  }
+  @media (max-width:480px){
+    nav{padding:12px 18px}
+    .nav-logo img{height:34px}
+    .hero h1{font-size:42px !important}
+    .hero-meta div span{font-size:22px}
+  }
+  @media (max-width: 768px) {
+    .hero-visual,
+    .hero-bottle {
+      margin-top: 30px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nav-logo">
+    <img src="https://cdn.shopify.com/s/files/1/0668/6831/4368/files/Slider-Logos-03-removebg-preview.png?v=1778820886" alt="Al Hajis Perfumes" />
+  </a>
+  <div class="nav-links" id="navLinks">
+    <a href="#collection">Collection</a>
+    <a href="#signature">Signature</a>
+    <a href="#house">The House</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="nav-right">Dubai · UAE</div>
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU OVERLAY -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">×</button>
+  <div class="mobile-menu-inner">
+    <a href="#collection">Collection</a>
+    <a href="#signature">Signature</a>
+    <a href="#house">The House</a>
+    <a href="#contact">Contact</a>
+    <div class="mobile-menu-meta">
+      <div>Dubai · United Arab Emirates</div>
+      <a href="tel:+971503056017">+971 50 305 6017</a>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" style="padding:0;max-width:none;margin:0">
+  <div class="hero-ornament"></div>
+  <div class="hero-ornament-bl"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">Crafted in Dubai · Inspired by Arabia</div>
+      <h1>The Scent <em>of</em> Magnificence.</h1>
+      <p class="hero-sub">A private collection of olfactory works built around rare oud, precious florals, and the discipline of restraint — composed in the United Arab Emirates.</p>
+      <div class="hero-cta">
+        <a href="#collection" class="btn">Discover the Collection</a>
+        <a href="#signature" class="btn ghost">The Signature Story</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="https://cdn.shopify.com/s/files/1/0668/6831/4368/files/alexandrite_b3377d7e-606c-4cb9-b46c-a4db56fdabc9.webp?v=1778821576" alt="Image — Eau de Parfum" class="hero-bottle" />
+    </div>
+  </div>
+  <div class="hero-meta">
+    <div><span>14</span>Master Perfumers</div>
+    <div><span>09</span>Signature Compositions</div>
+    <div><span>1.2k+</span>Days of Maceration</div>
+  </div>
+  <div class="hero-scroll">Scroll to Reveal</div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Cambodian Oud</span><span>Taif Rose</span><span>Mysore Sandalwood</span><span>Saffron of Kashmir</span><span>Madagascan Vanilla</span><span>Royal Amber</span>
+    <span>Cambodian Oud</span><span>Taif Rose</span><span>Mysore Sandalwood</span><span>Saffron of Kashmir</span><span>Madagascan Vanilla</span><span>Royal Amber</span>
+  </div>
+</div>
+
+<!-- COLLECTION -->
+<section id="collection">
+  <div class="section-head reveal">
+    <div>
+      <div class="section-eyebrow">The Collection</div>
+    </div>
+    <div>
+      <h2 class="section-title">Three compositions, <em>each a private world.</em></h2>
+    </div>
+  </div>
+
+  <div class="collection">
+    <div class="product-card reveal">
+      <div class="product-img">
+        <div class="product-badge">Signature</div>
+        <img src="https://cdn.shopify.com/s/files/1/0668/6831/4368/files/Image_ai_pic.webp?v=1778750782" alt="Image Eau de Parfum" />
+      </div>
+      <div class="product-meta">
+        <div>
+          <div class="product-name">Image</div>
+          <div class="product-notes">oud · rose · ambergris</div>
+        </div>
+        <div class="product-price">AED 495<small>100 ml</small></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="product-img">
+        <div class="product-badge">New</div>
+        <img src="https://cdn.shopify.com/s/files/1/0668/6831/4368/files/Tiger_wood.webp?v=1778750782" alt="Tiger Wood" />
+      </div>
+      <div class="product-meta">
+        <div>
+          <div class="product-name">Tiger Wood</div>
+          <div class="product-notes">oud · vetiver · smoked leather</div>
+        </div>
+        <div class="product-price">AED 495<small>100 ml</small></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="product-img">
+        <div class="product-badge">Limited</div>
+        <img src="https://cdn.shopify.com/s/files/1/0668/6831/4368/files/DSD_NEW.webp?v=1778750782" alt="Dune de Sable" />
+      </div>
+      <div class="product-meta">
+        <div>
+          <div class="product-name">Dune de Sable</div>
+          <div class="product-notes">saffron · cedar · warm amber</div>
+        </div>
+        <div class="product-price">AED 495<small>100 ml</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNATURE FEATURE -->
+<section class="signature" id="signature">
+  <div class="sig-inner">
+    <div class="sig-image reveal"></div>
+    <div class="sig-content reveal">
+      <div class="section-eyebrow" style="margin-bottom:24px">The Maison's Signature</div>
+      <h2><em>Image</em> — the perfume that <br/>becomes <em>you</em>.</h2>
+      <p>A composition that shifts with the wearer — luminous in Dubai sunlight, intimate by evening. A bright Calabrian bergamot opens into a Taif rose and powdered iris heart, settling into a base of aged Cambodian oud, ambergris, and Mysore sandalwood.</p>
+      <p>Crafted in editions of two thousand and signed by the perfumer.</p>
+
+      <div class="notes-pyramid">
+        <div class="note-row">
+          <div class="note-label">Top</div>
+          <div class="note-content">bergamot, pink pepper, neroli</div>
+        </div>
+        <div class="note-row">
+          <div class="note-label">Heart</div>
+          <div class="note-content">Taif rose, iris, jasmine sambac</div>
+        </div>
+        <div class="note-row">
+          <div class="note-label">Base</div>
+          <div class="note-content">Cambodian oud, ambergris, sandalwood</div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:24px;align-items:center;margin-top:36px;flex-wrap:wrap">
+        <a href="#" class="btn">Acquire — AED 495</a>
+        <a href="#" class="btn ghost">Read the Composition</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DUO SHOWCASE -->
+<div class="duo">
+  <div class="duo-card reveal">
+    <div class="duo-img" style="background-image:url('https://cdn.shopify.com/s/files/1/0668/6831/4368/files/Image_Body_Spray.webp?v=1778750784')"></div>
+    <h3>The <em>Voile</em> Body Mist</h3>
+    <p>A lighter veil of the signature — pressed for the unhurried moments between rituals.</p>
+    <div class="duo-price">
+      <span class="duo-price-num">AED 495<small>200 ml</small></span>
+      <a href="#" class="btn ghost">Discover</a>
+    </div>
+  </div>
+  <div class="duo-card reveal">
+    <div class="duo-img" style="background-image:url('https://cdn.shopify.com/s/files/1/0668/6831/4368/files/alexandrite_b3377d7e-606c-4cb9-b46c-a4db56fdabc9.webp?v=1778821576')"></div>
+    <h3>The <em>Discovery</em> Coffret</h3>
+    <p>Three signature compositions, presented in 7.5 ml crystal flacons — for the curator at heart.</p>
+    <div class="duo-price">
+      <span class="duo-price-num">AED 495<small>3 × 7.5 ml</small></span>
+      <a href="#" class="btn ghost">Discover</a>
+    </div>
+  </div>
+</div>
+
+<!-- THE HOUSE -->
+<section class="house" id="house">
+  <div class="house-inner reveal">
+    <div class="house-mark">✦</div>
+    <h2>"Perfume is the most intense form <em>of memory.</em> We bottle the desert nights we wish to return to."</h2>
+    <p>Born in Dubai, our maison is dedicated to a single principle: the patient composition of fragrance as though it were a piece of music. Every formula matures for no fewer than ninety days; every flacon is hand-finished in gold.</p>
+    <p>We do not produce by season. We produce by intention.</p>
+    <div class="house-sign">— The House of Image, Dubai</div>
+    <div class="house-sign-line"></div>
+  </div>
+</section>
+
+<!-- PRESS -->
+<div class="press reveal">
+  <div class="press-label">As featured in</div>
+  <div class="press-name">Vogue Arabia</div>
+  <div class="press-name">Harper's Bazaar</div>
+  <div class="press-name">Gulf News</div>
+  <div class="press-name">Time Out Dubai</div>
+</div>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <div class="reveal">
+    <h2>Enter <em>the Atelier.</em></h2>
+    <p>Private previews of upcoming compositions, perfumer's notes, and invitations to our seasonal salons in Dubai. Reserved for those who write to us.</p>
+    <form class="news-form" onsubmit="event.preventDefault();this.querySelector('input').value='';this.querySelector('input').placeholder='Thank you. We will be in touch.'">
+      <input type="email" placeholder="Your private email address" required />
+      <button type="submit">Subscribe ↗</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <img src="https://cdn.shopify.com/s/files/1/0668/6831/4368/files/Slider-Logos-03-removebg-preview.png?v=1778820886" alt="Al Hajis Perfumes" />
+      <p>A house of perfumery composed in the United Arab Emirates, finished by hand, delivered with intention.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Visit Us</h4>
+      <p>No. 27 Al Khabaisi Street</p>
+      <p>Dubai, United Arab Emirates</p>
+    </div>
+    <div class="foot-col">
+      <h4>Get in Touch</h4>
+      <a href="tel:+971503056017">+971 50 305 6017</a>
+      <a href="mailto:ocm@alhajisperfumes.com">ocm@alhajisperfumes.com</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <div>© Alexandrite · Crafted in the United Arab Emirates</div>
+    <div>All Rights Reserved</div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // mobile menu
+  const menu = document.getElementById('mobileMenu');
+  const toggle = document.getElementById('navToggle');
+  const closeBtn = document.getElementById('mobileMenuClose');
+  const openMenu = () => { menu.classList.add('open'); document.body.style.overflow = 'hidden'; };
+  const closeMenu = () => { menu.classList.remove('open'); document.body.style.overflow = ''; };
+  toggle.addEventListener('click', openMenu);
+  closeBtn.addEventListener('click', closeMenu);
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
